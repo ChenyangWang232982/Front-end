@@ -1,0 +1,133 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;          
+}
+.header {
+  min-height: 100vh;           /* How much of the screen does this block occupy */
+  
+  /*center*/
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  flex-direction: column;      
+  
+  /* beautify */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;         
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;         
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+  font-family: "Noto Sans SC", system-ui, sans-serif;
+}
+
+summary {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+  font-family: "Noto Sans SC", system-ui, sans-serif;
+}
+
+.info {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 200;
+    color: black;
+    background: white;
+    border:none;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+}
+
+.content {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+  font-family: "Noto Sans SC", system-ui, sans-serif;
+}
+
+.result {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    background: white;
+    border:none;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: "Noto Sans SC", system-ui, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.result:hover {
+  transform: translateY(-3px);  /*rising*/
+  box-shadow: 0 12px 30px purple;   
+}
+
+.result:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px purple;
+}
+.space {
+    flex: 0.5;
+    width: calc(100% / 3);
+    padding: 14px 32px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+    background: white;
+    opacity: 0.5;
+    border: none; 
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 1rem; 
+}
+#entrance {
+  display: inline-block;    /*self adaptive*/
+  padding: 14px 32px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  background: darkmagenta;
+  border: none;     
+  border-radius: 12px;
+  cursor: pointer;  /*Display a small hand when mouse hovers over it*/
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px purple;    /*shadow*/
+  text-decoration: none;
+}
+
+#entrance:hover {
+  transform: translateY(-3px);  /*rising*/
+  box-shadow: 0 12px 30px purple;   
+}
+
+#entrance:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px purple;
+}
+
+.header-content {
+  transition: opacity 0.6s ease-in-out;
+  opacity: 1;
+}
+
+/* 淡出时只针对内容层 */
+.header.fade-out .header-content {
+  opacity: 0;
+}
