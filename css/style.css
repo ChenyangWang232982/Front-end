@@ -39,7 +39,7 @@ summary {
   font-family: "Noto Sans SC", system-ui, sans-serif;
 }
 
-.info {
+.digit {
     display: inline-block;
     padding: 14px 32px;
     font-size: 1rem;
@@ -60,7 +60,7 @@ summary {
   font-family: "Noto Sans SC", system-ui, sans-serif;
 }
 
-.result {
+.submit {
     display: inline-block;
     padding: 14px 32px;
     font-size: 1rem;
@@ -74,18 +74,24 @@ summary {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.result:hover {
+.submit:hover {
   transform: translateY(-3px);  /*rising*/
   box-shadow: 0 12px 30px purple;   
 }
 
-.result:active {
+.submit:active {
   transform: translateY(1px);
   box-shadow: 0 4px 12px purple;
 }
+.mastermind {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  width: 100%;            
+}
 .space {
     flex: 0.5;
-    width: calc(100% / 3);
+    width: calc(100%);
     padding: 14px 32px;
     font-size: 1.5rem;
     font-weight: 400;
@@ -127,7 +133,22 @@ summary {
   opacity: 1;
 }
 
-/* 淡出时只针对内容层 */
+
 .header.fade-out .header-content {
   opacity: 0;
+}
+
+
+
+#guessesDisplay {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.guess-item {
+  display: block; 
+  text-align: left;
+  width: 120px; 
+  margin: 8px auto; 
+  white-space: nowrap; 
 }
